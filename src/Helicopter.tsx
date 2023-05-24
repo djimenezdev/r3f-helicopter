@@ -29,13 +29,13 @@ const Helicopter = (props: JSX.IntrinsicElements["mesh"] & HelicopterProps) => {
     useControls({
       helicopter: folder({
         heliPosX: {
-          value: 0,
+          value: -40,
           min: -innerWidth / 2,
           max: innerWidth / 2,
           step: 0.1,
         },
         heliPosY: {
-          value: 17.7,
+          value: 16.3,
           min: -10,
           max: 100,
           step: 0.1,
@@ -70,12 +70,11 @@ const Helicopter = (props: JSX.IntrinsicElements["mesh"] & HelicopterProps) => {
     });
 
   const { nodes, materials } = useGLTF("/models/helicopter.glb") as GLTFResult;
-  console.log(materials, nodes);
   const { viewport, camera } = useThree();
   const { width } = viewport.getCurrentViewport(camera, [0, 0, -10]);
 
   const [data] = useState({
-    x: width / 2,
+    x: -width / 2,
   });
 
   // useHelper(props.mode === "dark" && spotLightRef, SpotLightHelper);
