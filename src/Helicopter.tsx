@@ -1,8 +1,7 @@
-import { useGLTF, useHelper } from "@react-three/drei";
+import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { folder, useControls } from "leva";
-import { MutableRefObject, useEffect, useRef, useState } from "react";
-import { Object3D, SpotLightHelper } from "three";
+import { useRef, useState } from "react";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {
